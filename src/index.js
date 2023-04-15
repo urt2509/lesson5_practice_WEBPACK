@@ -31,5 +31,15 @@
 
 // console.log(sum(2, 3));
 
+import "./styles/style.css";
+import hbsData from "./template/base.hbs";
+import hbsList from "./template/secondtask.hbs";
+import { base, list, frameworks, libs } from "./data/hbsData.js";
 
-import './styles/style.css'
+const markup = hbsData(base);
+
+const root = document.querySelector("#root");
+root.insertAdjacentHTML("beforeend", markup);
+
+const markupList = hbsList(list);
+root.insertAdjacentHTML("beforeend", markupList);
