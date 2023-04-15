@@ -34,6 +34,8 @@
 import "./styles/style.css";
 import hbsData from "./template/base.hbs";
 import hbsList from "./template/secondtask.hbs";
+import hbsFrameworks from "./template/thirdtask.hbs";
+import hbsLibs from "./template/forthtask.hbs";
 import { base, list, frameworks, libs } from "./data/hbsData.js";
 
 const markup = hbsData(base);
@@ -43,3 +45,11 @@ root.insertAdjacentHTML("beforeend", markup);
 
 const markupList = hbsList(list);
 root.insertAdjacentHTML("beforeend", markupList);
+
+const markupFrameworks = hbsFrameworks(frameworks);
+
+root.insertAdjacentHTML("beforeend", markupFrameworks);
+
+const markuLibs = hbsLibs(libs);
+
+root.insertAdjacentHTML("beforeend", markuLibs);
